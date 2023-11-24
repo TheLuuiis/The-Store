@@ -7,16 +7,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="#" type="img-favicon">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Formulario</title>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <title>New Product</title>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 
     <body>
         <nav>
-            <div>
-                <div>
-                    <img src="./img/logoApp.svg" alt="logo">
+            <div class="nav-main">
+                <div class="nav-header">
+                    <img class="logo" src="./img/The_Store.png" alt="logo" width="140" height="50">
+                    <i class="fas fa-bars"></i>
                 </div>
-                <ul>
+                <ul class="menu">
                     <li><a href="#">Products</a></li>
                     <li><a href="#">Car</a></li>
                     <li><a href="#">Login</a></li>
@@ -24,24 +34,29 @@
                 </ul>
             </div>
         </nav>
-        
-        <div class="contenedor">
-            <div>
-                <img src="./img/logoApp.svg" alt="">
+        <div class="container-form">
+            <div class="login-box">
+                <h2>New Product</h2>
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="Name" required>
+                        <label>Name</label>
+                    </div>
+    
+                    <div class="user-box">
+                        <input type="number" name="Price" required>
+                        <label>Price</label>
+                    </div>
+    
+                    <div class="user-box">
+                        <input type="number" name="Inventory" required>
+                        <label>Inventory</label>
+                    </div>
+                    <button class="boton" type="submit">Create Product</button>
+                </form>
             </div>
-            <form action="#">
-                <label for="Name">Name</label>
-                <input type="text" placeholder="Name" required>
-
-                <label for="Price">Price</label>
-                <input type="number" placeholder="Price" required>
-
-                <label for="Inventory">Inventory</label>
-                <input type="number" placeholder="Inventory" required>
-
-                <button type="submit">Create Product</button>
-            </form>
         </div>
+
     </body>
 
 </html>
