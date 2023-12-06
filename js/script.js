@@ -1,6 +1,53 @@
 'used strict'
 // <    >  =>
 
+    // Datos de productos
+    const productos = [
+        { nombre: 'Bicicleta 4x4', precio: '$26.000', imagen: './img/Bicicleta.jpg' },
+        { nombre: 'Lentes de sol', precio: '$12.000', imagen: './img/Lentes de sol.jpg' },
+        { nombre: 'Iphone 12', precio: '$38.000', imagen: './img/Iphone 12.jpg' },
+        { nombre: 'Juego comedor', precio: '$140.000', imagen: './img/Juego comedor.jpg' }
+    ];
+
+    // Función para crear una card
+    function crearCard(producto) {
+        const cardContainer = document.getElementById('cardContainer');
+
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const imagen = document.createElement('img');
+        imagen.src = producto.imagen;
+        imagen.alt = 'Avatar';
+        imagen.width = '200';
+        imagen.height = '200';
+
+        const containerInfo = document.createElement('div');
+        containerInfo.className = 'container-info';
+
+        const titulo = document.createElement('h4');
+        titulo.textContent = producto.nombre;
+
+        const precio = document.createElement('p');
+        precio.textContent = producto.precio;
+
+        const boton = document.createElement('button');
+        boton.textContent = 'Add car';
+
+        // Agregar elementos al DOM
+        containerInfo.appendChild(titulo);
+        containerInfo.appendChild(precio);
+        containerInfo.appendChild(boton);
+
+        card.appendChild(imagen);
+        card.appendChild(containerInfo);
+
+        cardContainer.appendChild(card);
+    }
+
+    // Iterar sobre los productos y crear las cards
+    productos.forEach(crearCard);
+
 /* Responsive Desing Menú */
 const bar = document.querySelector(".fa-bars");
 const menu = document.querySelector(".menu");
